@@ -31,7 +31,7 @@ async def run_agent(
     thread_manager: Optional[ThreadManager] = None,
     native_max_auto_continues: int = 25,
     max_iterations: int = 150,
-    model_name: str = "openrouter/openai/gpt-4.1",
+    model_name: str = "gpt-4.1",
     enable_thinking: Optional[bool] = False,
     reasoning_effort: Optional[str] = 'low',
     enable_context_manager: bool = True

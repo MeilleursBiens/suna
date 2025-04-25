@@ -166,7 +166,7 @@ DAYTONA_TARGET="us"
 # Anthropic or OpenAI: 
 # Anthropic
 ANTHROPIC_API_KEY=
-MODEL_TO_USE="openrouter/openai/gpt-4.1"
+MODEL_TO_USE="gpt-4.1"
 
 # OR OpenAI API:
 OPENAI_API_KEY=your_openai_api_key
