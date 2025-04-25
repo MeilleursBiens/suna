@@ -98,6 +98,7 @@ COPY . /app
 COPY extensions /app/extensions
 COPY server.py /app/server.py
 COPY browser_api.py /app/browser_api.py
+RUN chmod 777 /app
 
 # Install Playwright and browsers with system dependencies
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
