@@ -40,7 +40,7 @@ MODEL_NAME_ALIASES = {
 }
 
 class AgentStartRequest(BaseModel):
-    model_name: Optional[str] = "gpt-4.1"
+    model_name: Optional[str] = "openrouter/anthropic/claude-3.7-sonnet"
     enable_thinking: Optional[bool] = False
     reasoning_effort: Optional[str] = 'low'
     stream: Optional[bool] = True
