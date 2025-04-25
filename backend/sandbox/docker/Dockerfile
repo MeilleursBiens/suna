@@ -95,6 +95,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy server script
 COPY . /app
+COPY extensions /app/extensions
 COPY server.py /app/server.py
 COPY browser_api.py /app/browser_api.py
 

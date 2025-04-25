@@ -333,11 +333,14 @@ class BrowserAutomation:
             print("Starting browser initialization...")
             playwright = await async_playwright().start()
             print("Playwright started, launching browser...")
+
+            extension_path = "extensions/cookies"  # Path to your extension
             
             # Use non-headless mode for testing with slower timeouts
             launch_options = {
                 "headless": False,
-                "timeout": 60000
+                "timeout": 60000,
+                "args": [f"--disable-extensions-except={extension_path}", f"--load-extension={extension_path}"]
             }
             
             try:
