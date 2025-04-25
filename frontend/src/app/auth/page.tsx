@@ -315,20 +315,7 @@ function LoginContent() {
             
             {/* Header content */}
             <div className="relative z-10 pt-24 pb-8 max-w-md mx-auto h-full w-full flex flex-col gap-2 items-center justify-center">
-              <Link 
-                href="/" 
-                className="group border border-border/50 bg-background hover:bg-accent/20 rounded-full text-sm h-8 px-3 flex items-center gap-2 transition-all duration-200 shadow-sm mb-6"
-              >
-                <ArrowLeft className="h-4 w-4 text-muted-foreground" />
-                <span className="font-medium text-muted-foreground text-xs tracking-wide">Back to home</span>
-              </Link>
-              
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tighter text-center text-balance text-primary">
-                {isSignUp ? "Join Suna" : "Welcome back"}
-              </h1>
-              <p className="text-base md:text-lg text-center text-muted-foreground font-medium text-balance leading-relaxed tracking-tight mt-2 mb-6">
-                {isSignUp ? "Create your account and start building with AI" : "Sign in to your account to continue"}
-              </p>
+              <img src={"https://mb-portail.s3.eu-west-3.amazonaws.com/logo_mb_ui_white.png"} style={{ height: 50 }}/>
             </div>
           </div>
           
@@ -342,24 +329,6 @@ function LoginContent() {
                   <span className="text-sm font-medium">{message}</span>
                 </div>
               )}
-
-              {/* Google Sign In */}
-              <div className="w-full">
-                <GoogleSignIn returnUrl={returnUrl || undefined} />
-              </div>
-
-              {/* Divider */}
-              <div className="relative my-8">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-border"></div>
-                </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="px-2 bg-[#F3F4F6] dark:bg-[#F9FAFB]/[0.02] text-muted-foreground">
-                    or continue with email
-                  </span>
-                </div>
-              </div>
-
               {/* Form */}
               <form className="space-y-4">
                 <div>
@@ -367,7 +336,7 @@ function LoginContent() {
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="Email address"
+                    placeholder="Adresse email"
                     className="h-12 rounded-full bg-background border-border"
                     required
                   />
@@ -378,7 +347,7 @@ function LoginContent() {
                     id="password"
                     name="password"
                     type="password"
-                    placeholder="Password"
+                    placeholder="Mot de passe"
                     className="h-12 rounded-full bg-background border-border"
                     required
                   />
@@ -390,7 +359,7 @@ function LoginContent() {
                       id="confirmPassword"
                       name="confirmPassword"
                       type="password"
-                      placeholder="Confirm password"
+                      placeholder="Confirmer le mot de passe"
                       className="h-12 rounded-full bg-background border-border"
                       required
                     />
@@ -405,14 +374,14 @@ function LoginContent() {
                         className="w-full h-12 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-md"
                         pendingText="Signing in..."
                       >
-                        Sign in
+                        Se connecter
                       </SubmitButton>
                       
                       <Link
                         href={`/auth?mode=signup${returnUrl ? `&returnUrl=${returnUrl}` : ''}`}
                         className="flex h-12 items-center justify-center w-full text-center rounded-full border border-border bg-background hover:bg-accent/20 transition-all"
                       >
-                        Create new account
+                        Créer un compte
                       </Link>
                     </>
                   ) : (
@@ -422,14 +391,14 @@ function LoginContent() {
                         className="w-full h-12 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-md"
                         pendingText="Creating account..."
                       >
-                        Sign up
+                        S'inscrire
                       </SubmitButton>
                       
                       <Link
                         href={`/auth${returnUrl ? `?returnUrl=${returnUrl}` : ''}`}
                         className="flex h-12 items-center justify-center w-full text-center rounded-full border border-border bg-background hover:bg-accent/20 transition-all"
                       >
-                        Back to sign in
+                        Retour à la connexion
                       </Link>
                     </>
                   )}
@@ -442,19 +411,11 @@ function LoginContent() {
                       onClick={() => setForgotPasswordOpen(true)}
                       className="text-sm text-primary hover:underline"
                     >
-                      Forgot password?
+                      Mot de passe oublié ?
                     </button>
                   </div>
                 )}
               </form>
-
-              <div className="mt-8 text-center text-xs text-muted-foreground">
-                By continuing, you agree to our{' '}
-                <Link href="/terms" className="text-primary hover:underline">
-                  Terms of Service
-                </Link>{' '}
-                and{' '}<Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link>
-              </div>
             </div>
           </div>
         </section>
@@ -465,7 +426,7 @@ function LoginContent() {
         <DialogContent className="sm:max-w-md rounded-xl bg-[#F3F4F6] dark:bg-[#F9FAFB]/[0.02] border border-border">
           <DialogHeader>
             <div className="flex items-center justify-between">
-              <DialogTitle className="text-xl font-medium">Reset Password</DialogTitle>
+              <DialogTitle className="text-xl font-medium">Mot de passe oublié</DialogTitle>
               <button 
                 onClick={() => setForgotPasswordOpen(false)}
                 className="rounded-full p-1 hover:bg-muted transition-colors"
@@ -474,7 +435,7 @@ function LoginContent() {
               </button>
             </div>
             <DialogDescription className="text-muted-foreground">
-              Enter your email address and we'll send you a link to reset your password.
+              Entrer votre adresse email pour réinitialiser le mot de passe.
             </DialogDescription>
           </DialogHeader>
           
@@ -482,7 +443,7 @@ function LoginContent() {
             <Input
               id="forgot-password-email"
               type="email"
-              placeholder="Email address"
+              placeholder="Adresse email"
               value={forgotPasswordEmail}
               onChange={(e) => setForgotPasswordEmail(e.target.value)}
               className="h-12 rounded-full bg-background border-border"
@@ -509,14 +470,14 @@ function LoginContent() {
                 type="submit"
                 className="h-12 px-6 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all shadow-md"
               >
-                Send Reset Link
+                Envoyer le lien
               </button>
               <button
                 type="button"
                 onClick={() => setForgotPasswordOpen(false)}
                 className="h-12 px-6 rounded-full border border-border bg-background hover:bg-accent/20 transition-all"
               >
-                Cancel
+                Annuler
               </button>
             </DialogFooter>
           </form>

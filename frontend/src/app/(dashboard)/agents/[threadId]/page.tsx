@@ -993,18 +993,18 @@ export default function ThreadPage({ params }: { params: Promise<ThreadParams> }
   useEffect(() => {
     if (projectName) {
       // Update document title when project name changes
-      document.title = `${projectName} | Kortix Suna`;
+      document.title = `${projectName} | MeilleursBiens : Suna`;
       
       // Update meta tags for SEO
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
-        metaDescription.setAttribute('content', `${projectName} - Interactive agent conversation powered by Kortix Suna`);
+        metaDescription.setAttribute('content', `${projectName} - Interactive agent conversation powered by MeilleursBiens Suna`);
       }
       
       // Update OpenGraph tags if they exist
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) {
-        ogTitle.setAttribute('content', `${projectName} | Kortix Suna`);
+        ogTitle.setAttribute('content', `${projectName} | MeilleursBiens Suna`);
       }
       
       const ogDescription = document.querySelector('meta[property="og:description"]');

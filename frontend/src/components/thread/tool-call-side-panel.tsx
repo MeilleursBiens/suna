@@ -290,7 +290,7 @@ export function ToolCallSidePanel({
           <div className="pt-4 pl-4 pr-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">Suna's Computer</h2>
+                <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">MeilleursBiens Lab AI</h2>
               </div>
               
               <Button 
@@ -306,7 +306,7 @@ export function ToolCallSidePanel({
           
           {/* Empty state message */}
           <div className="flex items-center justify-center flex-1 p-4">
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">No tool call details available.</p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">Aucun détail disponibles.</p>
           </div>
         </div>
       );
@@ -334,7 +334,7 @@ export function ToolCallSidePanel({
           <div className="pt-4 pl-4 pr-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">Suna's Computer</h2>
+                <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">MeilleursBiens Lab AI</h2>
               </div>
               
               <Button 
@@ -350,7 +350,7 @@ export function ToolCallSidePanel({
           
           {/* Error state message */}
           <div className="flex items-center justify-center flex-1 p-4">
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">Unable to display tool details.</p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 text-center">Impossible d'afficher les détails.</p>
           </div>
         </div>
       );
@@ -361,7 +361,7 @@ export function ToolCallSidePanel({
         <div className="pt-4 pl-4 pr-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">Suna's Computer</h2>
+              <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100">MeilleursBiens Lab AI</h2>
             </div>
             
             {currentToolCall.toolResult?.content && !isStreaming && (
@@ -400,7 +400,7 @@ export function ToolCallSidePanel({
               <div className="flex items-center gap-2">
                 <div className="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-400 flex items-center gap-1.5">
                   <CircleDashed className="h-3 w-3 animate-spin" />
-                  <span>Running</span>
+                  <span>En-cours</span>
                 </div>
                 
                 {/* Add close button */}

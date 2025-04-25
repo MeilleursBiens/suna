@@ -13,6 +13,19 @@ const nextConfig: NextConfig = {
     
     return config;
   },
+  async redirects() {
+    return [
+      // Basic redirect
+      {
+        source: '/',
+        destination: '/auth',
+        permanent: true,
+      },
+    ]
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
 };
 
 export default nextConfig;

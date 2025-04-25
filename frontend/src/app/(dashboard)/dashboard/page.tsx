@@ -230,10 +230,10 @@ function DashboardContent() {
                 onClick={() => setOpenMobile(true)}
               >
                 <Menu className="h-4 w-4" />
-                <span className="sr-only">Open menu</span>
+                <span className="sr-only">Ouvrir le menu</span>
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Open menu</TooltipContent>
+            <TooltipContent>Ouvrir le menu</TooltipContent>
           </Tooltip>
         </div>
       )}
@@ -241,14 +241,14 @@ function DashboardContent() {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[560px] max-w-[90%]">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-medium text-foreground mb-2">Hey </h1>
-          <h2 className="text-2xl text-muted-foreground">What would you like Suna to do today?</h2>
+          <h2 className="text-2xl text-muted-foreground">Que voulez-vous faire aujourd'hui ?</h2>
         </div>
         
         <ChatInput 
           ref={chatInputRef}
           onSubmit={handleSubmit} 
           loading={isSubmitting}
-          placeholder="Describe what you need help with..."
+          placeholder="Décrivez moi ce que vous voulez faire..."
           value={inputValue}
           onChange={setInputValue}
           hideAttachments={false}
