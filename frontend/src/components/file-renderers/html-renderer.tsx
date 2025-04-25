@@ -53,7 +53,7 @@ export function HtmlRenderer({ content, previewUrl, className }: HtmlRendererPro
             onClick={() => window.open(previewUrl, '_blank')}
           >
             <ExternalLink className="h-4 w-4" />
-            Open
+            Ouvrir
           </Button>
         </div>
 

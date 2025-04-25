@@ -193,10 +193,10 @@ export function NavAgents() {
                 className="text-muted-foreground hover:text-foreground h-8 w-8 flex items-center justify-center rounded-md"
               >
                 <Plus className="h-4 w-4" />
-                <span className="sr-only">New Agent</span>
+                <span className="sr-only">Nouvel agent</span>
               </Link>
             </TooltipTrigger>
-            <TooltipContent>New Agent</TooltipContent>
+            <TooltipContent>Nouvel agent</TooltipContent>
           </Tooltip>
         ) : null}
       </div>
@@ -209,11 +209,11 @@ export function NavAgents() {
                 <SidebarMenuButton asChild>
                   <Link href="/dashboard" className="flex items-center">
                     <Plus className="h-4 w-4" />
-                    <span>New Agent</span>
+                    <span>Nouvel agent</span>
                   </Link>
                 </SidebarMenuButton>
               </TooltipTrigger>
-              <TooltipContent>New Agent</TooltipContent>
+              <TooltipContent>Nouvel agent</TooltipContent>
             </Tooltip>
           </SidebarMenuItem>
         )}
@@ -289,13 +289,13 @@ export function NavAgents() {
                         <DropdownMenuItem asChild>
                           <a href={thread.url} target="_blank" rel="noopener noreferrer">
                             <ArrowUpRight className="text-muted-foreground" />
-                            <span>Open in New Tab</span>
+                            <span>Ouvrir dans un nouvel onglet</span>
                           </a>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
                           <Trash2 className="text-muted-foreground" />
-                          <span>Delete</span>
+                          <span>Supprimer</span>
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
@@ -309,7 +309,7 @@ export function NavAgents() {
           <SidebarMenuItem>
             <SidebarMenuButton className="text-sidebar-foreground/70">
               <MessagesSquare className="h-4 w-4" />
-              <span>No agents yet</span>
+              <span>Aucun agent</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         )}

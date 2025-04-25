@@ -97,7 +97,7 @@ export function SidebarLeft({
                 <TooltipTrigger asChild>
                   <SidebarTrigger className="h-8 w-8" />
                 </TooltipTrigger>
-                <TooltipContent>Toggle sidebar (CMD+B)</TooltipContent>
+                <TooltipContent>Ouvrir la barre latérale (CMD+B)</TooltipContent>
               </Tooltip>
             )}
             {isMobile && (
@@ -110,7 +110,7 @@ export function SidebarLeft({
                     <Menu className="h-4 w-4" />
                   </button>
                 </TooltipTrigger>
-                <TooltipContent>Open menu</TooltipContent>
+                <TooltipContent>Ouvrir le menu</TooltipContent>
               </Tooltip>
             )}
           </div>
@@ -126,7 +126,7 @@ export function SidebarLeft({
               <TooltipTrigger asChild>
                 <SidebarTrigger className="h-8 w-8" />
               </TooltipTrigger>
-              <TooltipContent>Expand sidebar (CMD+B)</TooltipContent>
+              <TooltipContent>Ouvrir la barre latérale (CMD+B)</TooltipContent>
             </Tooltip>
           </div>
         )}        

@@ -173,7 +173,7 @@ export function SiteHeader({
             size="icon"
             onClick={onToggleSidePanel}
             className="h-9 w-9 cursor-pointer"
-            aria-label="Toggle computer panel"
+            aria-label="Afficher la vue ordinateur"
           >
             <PanelRightOpen className="h-4 w-4" />
           </Button>
@@ -192,7 +192,7 @@ export function SiteHeader({
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>View Files in Task</p>
+                <p>Voir les fichiers de la tâche</p>
               </TooltipContent>
             </Tooltip>
 
@@ -208,7 +208,7 @@ export function SiteHeader({
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Copy Link</p>
+                <p>Copier le lien</p>
               </TooltipContent>
             </Tooltip>
 
@@ -224,7 +224,7 @@ export function SiteHeader({
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Toggle Computer Preview (CMD+I)</p>
+                <p>Afficher la vue ordinateur (CMD+I)</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

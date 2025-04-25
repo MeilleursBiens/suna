@@ -108,11 +108,11 @@ export function FileBrowser({ sandboxId, onSelectFile, trigger }: FileBrowserPro
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        {trigger || <Button variant="outline">Browse Files</Button>}
+        {trigger || <Button variant="outline">Voir les fichiers</Button>}
       </DialogTrigger>
       <DialogContent className="sm:max-w-[800px] max-h-[80vh] overflow-hidden flex flex-col">
         <DialogHeader>
-          <DialogTitle>Sandbox Files</DialogTitle>
+          <DialogTitle>Fichiers Sandbox</DialogTitle>
         </DialogHeader>
         
         {/* Breadcrumbs */}
@@ -153,7 +153,7 @@ export function FileBrowser({ sandboxId, onSelectFile, trigger }: FileBrowserPro
             ) : files.length === 0 ? (
               <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
                 <Coffee className="h-8 w-8 mb-2" />
-                <p>No files found</p>
+                <p>Aucun fichiers</p>
               </div>
             ) : (
               <div className="p-2">
@@ -206,7 +206,7 @@ export function FileBrowser({ sandboxId, onSelectFile, trigger }: FileBrowserPro
               ) : (
                 <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
                   <File className="h-8 w-8 mb-2" />
-                  <p>Select a file to preview</p>
+                  <p>Choisissez un fichier à prévisualiser</p>
                 </div>
               )}
             </div>
@@ -215,7 +215,7 @@ export function FileBrowser({ sandboxId, onSelectFile, trigger }: FileBrowserPro
         
         {selectedFile && fileContent && onSelectFile && (
           <div className="flex justify-end pt-2">
-            <Button onClick={handleSelectFile}>Select File</Button>
+            <Button onClick={handleSelectFile}>Sélectionner un fichier</Button>
           </div>
         )}
       </DialogContent>

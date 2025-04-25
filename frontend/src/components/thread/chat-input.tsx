@@ -483,7 +483,7 @@ export const ChatInput = forwardRef<ChatInputHandles, ChatInputProps>(({
                   </Button>
                 </TooltipTrigger>
                 <TooltipContent side="top">
-                  <p>Attach files</p>
+                  <p>Ajouter un fichier</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
@@ -541,7 +541,7 @@ export const ChatInput = forwardRef<ChatInputHandles, ChatInputProps>(({
         >
           <div className="text-xs text-muted-foreground flex items-center gap-2">
             <Loader2 className="h-3 w-3 animate-spin" />
-            <span>Kortix Suna is working...</span>
+            <span>MeilleursBiens Lab AI est en train de travailler...</span>
           </div>
         </motion.div>
       )}

@@ -656,7 +656,7 @@ export function FileViewerModal({
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="sm:max-w-[90vw] md:max-w-[1200px] w-[95vw] h-[90vh] max-h-[900px] flex flex-col p-0 gap-0 overflow-hidden">
         <DialogHeader className="px-4 py-2 border-b flex-shrink-0">
-          <DialogTitle className="text-lg font-semibold">Workspace Files</DialogTitle>
+          <DialogTitle className="text-lg font-semibold">Fichiers de Sandbox</DialogTitle>
         </DialogHeader>
         
         {/* Navigation Bar */}
@@ -678,7 +678,7 @@ export function FileViewerModal({
               className="h-7 px-2 text-sm font-medium min-w-fit flex-shrink-0"
               onClick={navigateHome}
             >
-              home
+              accueil
             </Button>
             
             {currentPath !== '/workspace' && (
@@ -726,7 +726,7 @@ export function FileViewerModal({
                   ) : (
                     <Download className="h-4 w-4" />
                   )}
-                  <span className="hidden sm:inline">Download</span>
+                  <span className="hidden sm:inline">Télécharger</span>
                 </Button>
                 
                 {/* Replace the Export as PDF button with a dropdown */}
@@ -744,7 +744,7 @@ export function FileViewerModal({
                         ) : (
                           <FileText className="h-4 w-4" />
                         )}
-                        <span className="hidden sm:inline">Export as PDF</span>
+                        <span className="hidden sm:inline">Exporter en PDF</span>
                         <ChevronDown className="h-3 w-3 ml-1" />
                       </Button>
                     </DropdownMenuTrigger>
@@ -759,7 +759,7 @@ export function FileViewerModal({
                         onClick={() => handleExportPdf('landscape')}
                         className="flex items-center gap-2 cursor-pointer"
                       >
-                        <span>⬌</span> Landscape
+                        <span>⬌</span> Paysage
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -780,7 +780,7 @@ export function FileViewerModal({
                 ) : (
                   <Upload className="h-4 w-4" />
                 )}
-                <span className="hidden sm:inline">Upload</span>
+                <span className="hidden sm:inline">Uploader</span>
               </Button>
             )}
             
@@ -802,13 +802,13 @@ export function FileViewerModal({
               {isLoadingContent ? (
                 <div className="h-full w-full flex flex-col items-center justify-center">
                   <Loader className="h-8 w-8 animate-spin text-primary mb-3" />
-                  <p className="text-sm text-muted-foreground">Loading file...</p>
+                  <p className="text-sm text-muted-foreground">Chargement du fichier...</p>
                 </div>
               ) : contentError ? (
                 <div className="h-full w-full flex items-center justify-center p-4">
                   <div className="max-w-md p-6 text-center border rounded-lg bg-muted/10">
                     <AlertTriangle className="h-10 w-10 text-orange-500 mx-auto mb-4" />
-                    <h3 className="text-lg font-medium mb-2">Error Loading File</h3>
+                    <h3 className="text-lg font-medium mb-2">Erreur de chargement</h3>
                     <p className="text-sm text-muted-foreground mb-4">{contentError}</p>
                     <div className="flex justify-center gap-3">
                       <Button 
@@ -861,7 +861,7 @@ export function FileViewerModal({
               ) : files.length === 0 ? (
                 <div className="h-full w-full flex flex-col items-center justify-center">
                   <Folder className="h-12 w-12 mb-2 text-muted-foreground opacity-30" />
-                  <p className="text-sm text-muted-foreground">Directory is empty</p>
+                  <p className="text-sm text-muted-foreground">Dossier vide</p>
                 </div>
               ) : (
                 <ScrollArea className="h-full w-full p-2">

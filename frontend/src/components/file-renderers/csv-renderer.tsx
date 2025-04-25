@@ -133,7 +133,7 @@ export function CsvRenderer({ content, className }: CsvRendererProps) {
           </Button>
           
           <span className="text-sm text-muted-foreground min-w-[100px] text-center">
-            Page {currentPage} of {totalPages}
+            Page {currentPage}/{totalPages}
           </span>
           
           <Button
