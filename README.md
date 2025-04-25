@@ -166,7 +166,7 @@ DAYTONA_TARGET="us"
 # Anthropic or OpenAI: 
 # Anthropic
 ANTHROPIC_API_KEY=
-MODEL_TO_USE="anthropic/claude-3-7-sonnet-latest"
+MODEL_TO_USE="openrouter/anthropic/claude-3-7-sonnet-latest"
 
 # OR OpenAI API:
 OPENAI_API_KEY=your_openai_api_key

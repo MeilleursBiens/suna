@@ -52,7 +52,7 @@ class Configuration:
     AWS_REGION_NAME: Optional[str] = None
     
     # Model configuration
-    MODEL_TO_USE: str = "gpt-4o"
+    MODEL_TO_USE: str = "openai/gpt-4o"
     
     # Supabase configuration
     SUPABASE_URL: Optional[str] = None
